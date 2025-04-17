@@ -72,9 +72,9 @@ Para simplificar comandos de Laravel Installer y Artisan en el contenedor `webse
    # Laravel Installer (crea proyectos en /var/www/html)
    alias laravel="docker-compose exec -w /var/www/html webserver laravel"
 
-   # Artisan para el proyecto actual (ajusta '/test' si tu carpeta es otra)
-   alias art="docker-compose exec -w /var/www/html/test webserver php artisan"
-   alias artisan="docker-compose exec -w /var/www/html/test webserver php artisan"
+   # Comandos Artisan y Composer (Ejecutar los comandos dentro de los proyectos):
+   alias art='docker-compose exec -w "/var/www/html/$(basename "$PWD")" webserver php artisan'
+   alias cpr='docker-compose exec -w "/var/www/html/$(basename "$PWD")" webserver composer'
    ```
 3. Guardar y recargar:
    ```bash

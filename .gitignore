@@ -3,3 +3,6 @@ logs/
 
 # Ignorar ficheros de log sueltos (por si acaso)
 *.log
+
+# Ignorar todos los proyectos
+www/
