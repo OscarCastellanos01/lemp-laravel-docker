@@ -1,0 +1,5 @@
+# Ignorar todos los logs
+logs/
+
+# Ignorar ficheros de log sueltos (por si acaso)
+*.log
