@@ -17,9 +17,10 @@ services:
     restart: always
 
   database:
-    image: mariadb:10.11
+    build:
+      context: ./database
     ports:
-      - "3306:3306"
+      - "3309:3309"
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: myapp
@@ -27,6 +28,7 @@ services:
       MYSQL_PASSWORD: password
     volumes:
       - mariadb_data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - app-network
     restart: always
@@ -36,6 +38,7 @@ services:
     container_name: lemp_phpmyadmin
     environment:
       PMA_HOST: database
+      PMA_PORT: 3309
       PMA_USER: development1
       PMA_PASSWORD: password
     ports:
