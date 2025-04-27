@@ -87,10 +87,10 @@ Para simplificar comandos de Laravel Installer y Artisan en el contenedor `webse
 
 ### Crear un nuevo proyecto Laravel
 ```bash
-laravel new test          # Crea carpeta www/test con Laravel 12
+laravel new example          # Crea carpeta www/example con Laravel 12
 ```
 
-### Usar Artisan dentro de "test"
+### Usar Artisan dentro de "example"
 ```bash
 art --help                # Muestra ayuda de Artisan
 art migrate               # Ejecuta migraciones pendientes
@@ -101,7 +101,7 @@ artisan make:controller HomeController  # Crea un controlador
 
 ## Acceso a servicios
 
-- **Aplicación Laravel**:  [http://localhost/](http://localhost/)  (apunta al proyecto en `www/test`)
+- **Aplicación Laravel**:  [http://localhost/](http://localhost/)  (apunta al proyecto en `www/example`)
 - **phpMyAdmin**:          [http://localhost:8081](http://localhost:8081)
 - **Base de datos MariaDB**:  puerto `3306`
 
@@ -119,7 +119,7 @@ Para usar un dominio local como `example.test`:
    ```
    127.0.0.1   example.test
    ```
-3. Crear un virtual host en `webserver/config/example.conf` con `server_name example.test`.
+<!-- 3. Crear un virtual host en `webserver/config/example.conf` con `server_name example.test`. -->
 
 ---
 
