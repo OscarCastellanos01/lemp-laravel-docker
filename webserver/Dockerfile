@@ -8,7 +8,7 @@ RUN sed -i 's|mirrorlist|#mirrorlist|g' /etc/yum.repos.d/CentOS-* && \
     yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
     yum-config-manager --enable remi-php82
 
-# 2) Instalar Nginx, PHP 8.2‑FPM, extensiones, Nodejs 22, Composer y Laravel CLI
+# 2) Instalar Nginx, PHP‑FPM, Composer y Laravel CLI
 RUN yum -y update && \
     yum -y install \
       nginx \
